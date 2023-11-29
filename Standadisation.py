@@ -1,4 +1,8 @@
-def median(series: list) -> float:
+"""typing from operations values"""
+from typing import List, Union
+
+
+def median(series: List[Union[float, int]]) -> float:
 
     """
     Calculate median in a list of values
@@ -84,8 +88,8 @@ def standard_deviation(series: list, func_median=median) -> float:
 
 def calculator_standardization(
     unknown: float,
-    median: float,
-    deviation: float
+    value_median: float,
+    value_deviation: float
 ) -> float:
     """
     calculate value to standardization
@@ -99,7 +103,7 @@ def calculator_standardization(
     Returns:
         float: Value of standardization.
     """
-    return (unknown - median) / deviation
+    return (unknown - value_median) / value_deviation
 
 
 def standardization(series: list, func_median=median) -> list:
@@ -159,5 +163,6 @@ def normalization(series: list) -> list:
         value, max_value, min_value) for value in series]
 
 
-print(standardization([4, 5, 6, 7, 8]))
-print(normalization([4, 5, 6, 7, 8]))
+if __name__ == "__main__":
+    print(standardization([4, 5, 6, 7, 8]))
+    print(normalization([4, 5, 6, 7, 8]))

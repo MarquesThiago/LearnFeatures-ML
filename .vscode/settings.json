@@ -1,9 +1,23 @@
 {
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
+
     "python.linting.ignorePatterns": [
         "**/site-packages/**/*.py",
         ".vscode/*.py"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "commandCenter.border": "#e7e7e799",
+        "panel.border": "#359268",
+        "sash.hoverBorder": "#359268",
+        "sideBar.border": "#359268",
+        "statusBar.background": "#359268",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#43b783",
+        "statusBarItem.remoteBackground": "#359268",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#359268",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#35926899",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#42b883"
 }

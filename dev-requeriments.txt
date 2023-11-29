@@ -1,0 +1,11 @@
+blue
+flake8
+isort
+mypy
+pytest-mock
+pytest
+faker
+autopep8
+mypy
+mypy-extensions
+typing_extensions==4.5.0
