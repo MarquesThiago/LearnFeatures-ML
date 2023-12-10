@@ -1,23 +1,24 @@
 """typing from operations values"""
-from typing import List, Union
+from collections.abc import Callable
+from typing_variables import VectorReal
 
 
-def median(series: List[Union[float, int]]) -> float:
+def median(series: VectorReal) -> float:
 
     """
     Calculate median in a list of values
 
     Args:
-        series(list): list with values
+        series(List[float, int]): list with values
 
     Returns:
-        float: value from median
+        Float: value from median
     """
     total = len(series)
     return sum(series) / total
 
 
-def deviation(series: list, value_median: float) -> list:
+def deviation(series: VectorReal, value_median: float) -> VectorReal:
 
     """
     Calculate difference between value in median to values
@@ -34,7 +35,7 @@ def deviation(series: list, value_median: float) -> list:
     return [abs(value_median - number) for number in series]
 
 
-def variance(series: list, subtract: bool = True) -> float:
+def variance(series: VectorReal, subtract: bool = True) -> float:
 
     """
     Calculate variance in a list of values integer or float
@@ -66,7 +67,9 @@ def variance(series: list, subtract: bool = True) -> float:
     return sum(elevation) / (total - value_subtract)
 
 
-def standard_deviation(series: list, func_median=median) -> float:
+def standard_deviation(
+    series: VectorReal, func_median: Callable[[VectorReal], float] = median
+) -> float:
 
     """
     calculate standard deviation to list values integer or  float.
@@ -106,7 +109,9 @@ def calculator_standardization(
     return (unknown - value_median) / value_deviation
 
 
-def standardization(series: list, func_median=median) -> list:
+def standardization(
+    series: VectorReal, func_median: Callable[[VectorReal], float] = median
+) -> VectorReal:
 
     """
     Return a list with values standardized to arguments from series
@@ -144,7 +149,7 @@ def calculate_normalize(
     return (unknown - value_minimum) / (value_maximum - value_minimum)
 
 
-def normalization(series: list) -> list:
+def normalization(series: VectorReal) -> VectorReal:
 
     """
     Calculate values to normalization from series
